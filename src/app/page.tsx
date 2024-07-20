@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import LinearGradientGenerator from "~/components/LinearGradientGenerator";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -107,6 +109,27 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
+      </div>
+      <div className="w-14 h-14 rounded-full overflow-hidden">
+        <LinearGradientGenerator
+          colors={["#ff7e5f", "#feb47b"]}
+          direction="to right"
+          stops={["0%", "100%"]}
+        />
+      </div>
+      <div className="w-14 h-14  rounded-lg overflow-hidden">
+        <LinearGradientGenerator
+          colors={["#6a11cb", "#2575fc"]}
+          direction="to bottom"
+          stops={["0%", "100%"]}
+        />
+      </div>
+      <div className="w-14 h-14 rounded-lg overflow-hidden">
+        <LinearGradientGenerator
+          colors={["#04BEF8", "#0AB025"]}
+          direction="45deg"
+          stops={["20%", "100%"]}
+        />
       </div>
     </main>
   );
